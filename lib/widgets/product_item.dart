@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:prueba_final/screens/product_detail.dart';
 import 'package:provider/provider.dart';
-import 'package:prueba_final/providers/product.dart';
+import 'file:///C:/flutter_windows_1.20.1-stable/proyect/prueba_final/lib/models/product.dart';
+import '../models/';
 
 class ProductItem extends StatelessWidget {
 
-
+  final String id;
+  final String title;
+  final String imag
 
 
   @override
