@@ -16,11 +16,12 @@ class productsGrid extends StatelessWidget {
     return GridView.builder(
       padding: const EdgeInsets.all(10.0),
       itemCount: products.length,
-      itemBuilder: (ctx, i) => ChangeNotifierProvider(
-        builder: (c)=> products[i],
-        child: ProductItem(
+      itemBuilder: (ctx, i) => ProductItem(
+        products[i].id,
+        products[i].title,
+        products[i].image01,
+        products[i].price,
         ),
-          ),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 1,
         childAspectRatio: 16 / 9,

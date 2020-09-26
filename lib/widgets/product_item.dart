@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:prueba_final/screens/product_detail.dart';
 import 'package:provider/provider.dart';
 import 'file:///C:/flutter_windows_1.20.1-stable/proyect/prueba_final/lib/models/product.dart';
-import '../models/';
+import '../models/product.dart';
 
 class ProductItem extends StatelessWidget {
 
   final String id;
   final String title;
-  final String imag
+  final String image01;
+  final String price;
 
+  ProductItem(this.id,this.title,this.image01,this.price);
 
   @override
   Widget build(BuildContext context) {
-
-    final product = Provider.of<Product>(context);
 
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
@@ -23,11 +23,11 @@ class ProductItem extends StatelessWidget {
         onTap: (){
           Navigator.of(context).pushNamed(
             ProductDetail.routeName,
-            arguments: product.id,
+            arguments: id,
           );
         },
         child: Image.network(
-          product.image01,
+          image01,
           fit: BoxFit.cover,
     ),
       ),
@@ -42,7 +42,7 @@ class ProductItem extends StatelessWidget {
           onPressed: (){},
         ),
         title: Text(
-          product.title,
+          title,
           style: TextStyle(fontSize: 15),
           softWrap: true,
           overflow: TextOverflow.fade,
@@ -52,7 +52,7 @@ class ProductItem extends StatelessWidget {
           children: [
             Icon(Icons.attach_money),
             Text(
-              product.price,
+             price,
               style: TextStyle(color: Colors.white, fontSize: 15),
               textAlign: TextAlign.end,
             ),

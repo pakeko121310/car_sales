@@ -16,7 +16,7 @@ class ProductDetail extends StatelessWidget {
         title: Text(loadedProduct.title),
       ),
       body: Center(
-        child: Text(loadedProduct.price),
+        child: Image.network(loadedProduct.image01),
       ),
     );
   }
