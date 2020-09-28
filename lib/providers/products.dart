@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/flutter_windows_1.20.1-stable/proyect/prueba_final/lib/providers/product.dart';
+import '../providers/product.dart';
 import 'package:prueba_final/models/product.dart';
 
 class Products with ChangeNotifier {
